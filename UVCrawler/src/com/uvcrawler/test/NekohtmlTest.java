@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import javax.xml.transform.TransformerException;
 
+import org.apache.commons.lang3.time.DateFormatUtils;
+import org.apache.commons.lang3.time.DateUtils;
 import org.apache.xerces.parsers.DOMParser;
 import org.apache.xpath.XPathAPI;
 import org.jsoup.Jsoup;
@@ -32,6 +34,8 @@ public class NekohtmlTest {
 			String s= products.toString();
 			System.out.println(s);
 
+			
+			
 		} catch (SAXException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
