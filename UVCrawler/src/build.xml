@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<project name="ubk_spider" default="compile" basedir=".">
+
+	<property name="dest" value="build/classes" />
+	<property name="base.dir" value="." />
+	<property name="lib.dir" value="${base.dir}/lib" />
+
+	<target name="clean">
+		<delete dir="build" />
+	</target>
+
+	<target name="compile" depends="copyfiles">
+		<mkdir dir="build/classes" />
+		<javac srcdir="src" destdir="${dest}" encoding="utf-8" compiler="javac1.7">
+			<classpath refid="compile.classpath" />
+		</javac>
+	</target>
+
+	<path id="compile.classpath">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="copyfiles" depends="clean">
+		<copy todir="${base.dir}/build/classes">
+			<fileset dir="${base.dir}">
+				<include name="lib/" />
+			</fileset>
+			<fileset dir="${base.dir}/src">
+				<include name="*.xml" />
+				<include name="*.properties" />
+				<include name="config/" />
+			</fileset>
+			<fileset dir="${base.dir}/src">
+				<include name="com/unbank/robotspider/dao/*.xml" />
+			</fileset>
+		</copy>
+	</target>
+
+</project>
