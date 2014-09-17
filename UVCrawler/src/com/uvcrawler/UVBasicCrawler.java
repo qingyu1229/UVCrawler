@@ -14,7 +14,6 @@ public class UVBasicCrawler extends WebCrawler {
 			+ "|wav|avi|mov|mpeg|ram|m4v|pdf" + "|rm|smil|wmv|swf|wma|zip|rar|gz))$");
 	
 	
-	
 	@Override
 	public void onStart() {
 		// TODO Auto-generated method stub
@@ -32,9 +31,17 @@ public class UVBasicCrawler extends WebCrawler {
 		return !FILTERS.matcher(href).matches() && href.startsWith( url.getDomain());
 	}
 
+	
+	
+	
+	/**
+	 * 此处可以设置抓取时每一个深度按照一定的规则进行抓取
+	 * @param url
+	 * @param map
+	 * @return
+	 */
 	protected boolean shouldVisitOnDepth(WebURL url,Map<Short,String> map){
 		short depth=url.getDepth();
-		
 		if(map.get(depth)==null){
 			return true;
 		}
@@ -77,10 +84,8 @@ public class UVBasicCrawler extends WebCrawler {
 			System.out.println("Html length: " + html.length());
 			System.out.println("Number of outgoing links: " + links.size());
 		}
-
 		System.out.println("=============");
 	}
-	
 	
 	@Override
 	public void onBeforeExit() {
