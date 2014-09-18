@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration >
-  <context id="context1" >
+  <context id="mysql_context" >
 
-    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/mycrawler?autoReconnect=true&amp;characterEncoding=UTF-8" userId="root" password="root" />
-    <javaModelGenerator targetPackage="com.uvcrawler.dao" targetProject="src/model" />
-    <sqlMapGenerator targetPackage="com.uvcrawler.dao.mapper" targetProject="src/mapper" />
-    <javaClientGenerator targetPackage="com.uvcrawler.dao.mapper" targetProject="src/mapper" type="XMLMAPPER" />
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" 
+    connectionURL="jdbc:mysql://182.254.133.252:3306/uvcrawler?autoReconnect=true&amp;characterEncoding=UTF-8" 
+    userId="root" 
+    password="root" />
+    <javaModelGenerator targetPackage="com.uvcrawler.vo" targetProject="/UVCrawler/src" />
+    <sqlMapGenerator targetPackage="com.uvcrawler.vo.mapper" targetProject="/UVCrawler/src" />
+    <javaClientGenerator targetPackage="com.uvcrawler.vo.client" targetProject="/UVCrawler/src" type="XMLMAPPER" />
     <table schema="???" tableName="???" >
       <columnOverride column="???" property="???" />
     </table>
+   
   </context>
+
 </generatorConfiguration>
