@@ -1,10 +1,9 @@
 package com.uvcrawler.crawler;
 
-import java.util.List;
 import java.util.Map;
 
 import com.uvcrawler.UVBasicCrawler;
-import com.uvcrawler.entity.CompanyReg;
+import com.uvcrawler.vo.Reg_company;
 
 import edu.uci.ics.crawler4j.crawler.Page;
 import edu.uci.ics.crawler4j.parser.HtmlParseData;
@@ -13,11 +12,11 @@ import edu.uci.ics.crawler4j.url.WebURL;
 public class UVCrawler extends UVBasicCrawler {
 
 	private Map<Short,String> map;
-	private CompanyReg compantReg;
+	private Reg_company companyReg;
 	
-	public UVCrawler(Map<Short,String> map,CompanyReg compantReg){
+	public UVCrawler(Map<Short,String> map,Reg_company companyReg){
 		this.map=map;
-		this.compantReg=compantReg;
+		this.companyReg=companyReg;
 	}
 	
 	@Override
@@ -45,11 +44,6 @@ public class UVCrawler extends UVBasicCrawler {
 
 	@Override
 	public void onBeforeExit() {
-		// TODO Auto-generated method stub
 		super.onBeforeExit();
 	}
-
-	
-	
-	
 }

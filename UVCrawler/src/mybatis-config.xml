@@ -4,12 +4,18 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-	<settings>
-		<!-- changes from the defaults -->
+	<!-- <settings>
+		changes from the defaults
 		<setting name="lazyLoadingEnabled" value="false" />
-	</settings>
-	<typeAliases>
-		<typeAlias alias="WebSite" type="com.unbank.robotspider.entity.WebSite" />
-		<typeAlias alias="WebPage" type="com.unbank.robotspider.entity.WebPage" />
-	</typeAliases>
+	</settings> -->
+	<mappers>
+		<!--userMapper.xml装载进来 同等于把“dao”的实现装载进来 -->
+		<mapper resource="com/uvcrawler/vo/mapper/CompanyMapper.xml" />
+		<mapper resource="com/uvcrawler/vo/mapper/CrawlinfologMapper.xml" />
+		<mapper resource="com/uvcrawler/vo/mapper/ErrorlogMapper.xml" />
+		<mapper resource="com/uvcrawler/vo/mapper/ProxyMapper.xml" />
+		<mapper resource="com/uvcrawler/vo/mapper/Reg_companyMapper.xml" />
+		<mapper resource="com/uvcrawler/vo/mapper/WebsiteMapper.xml" />
+		
+	</mappers>
 </configuration>  

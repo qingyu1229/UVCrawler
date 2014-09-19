@@ -7,11 +7,23 @@
     connectionURL="jdbc:mysql://182.254.133.252:3306/uvcrawler?autoReconnect=true&amp;characterEncoding=UTF-8" 
     userId="root" 
     password="root" />
-    <javaModelGenerator targetPackage="com.uvcrawler.vo" targetProject="/UVCrawler/src" />
-    <sqlMapGenerator targetPackage="com.uvcrawler.vo.mapper" targetProject="/UVCrawler/src" />
-    <javaClientGenerator targetPackage="com.uvcrawler.vo.client" targetProject="/UVCrawler/src" type="XMLMAPPER" />
-    <table schema="???" tableName="???" >
-      <columnOverride column="???" property="???" />
+    <javaModelGenerator targetPackage="com.uvcrawler.vo" targetProject="UVCrawler/src" />
+    <sqlMapGenerator targetPackage="com.uvcrawler.vo.mapper" targetProject="UVCrawler/src" />
+    <javaClientGenerator targetPackage="com.uvcrawler.vo.client" targetProject="UVCrawler/src" type="XMLMAPPER" />
+    
+    <table schema="uvcrawler" tableName="uv_company" domainObjectName="Company">
+    </table>
+    <table schema="uvcrawler" tableName="uv_crawlinfolog" domainObjectName="Crawlinfolog">
+    </table>
+    <table schema="uvcrawler" tableName="uv_crawlinfolog" domainObjectName="Crawlinfolog">
+    </table>
+    <table schema="uvcrawler" tableName="uv_errorlog" domainObjectName="Errorlog">
+    </table>
+    <table schema="uvcrawler" tableName="uv_proxy" domainObjectName="Proxy">
+    </table>
+    <table schema="uvcrawler" tableName="uv_reg_company" domainObjectName="Reg_company">
+    </table>
+     <table schema="uvcrawler" tableName="uv_website" domainObjectName="Website">
     </table>
    
   </context>

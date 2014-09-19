@@ -90,7 +90,8 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	<!-- scan for mappers and let them be autowired -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<!-- Mapper接口所在包名，Spring会自动查找其下的Mapper -->
-		<property name="basePackage" value="com.uvcrawler.vo.mapper" />
+		<property name="basePackage" value="com.uvcrawler.vo.client" />
+	<!-- 	<property name="sqlSessionFactory" ref="sqlSessionFactory"></property> -->
 	</bean>
 
 

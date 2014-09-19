@@ -1,7 +1,8 @@
 package com.uvcrawler.parse;
 
 import java.util.Map;
-import com.uvcrawler.entity.Company;
+
+import com.uvcrawler.vo.Company;
 
 public interface Parser {
 	
