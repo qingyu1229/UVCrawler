@@ -16,6 +16,6 @@
 		<mapper resource="com/uvcrawler/vo/mapper/ProxyMapper.xml" />
 		<mapper resource="com/uvcrawler/vo/mapper/Reg_companyMapper.xml" />
 		<mapper resource="com/uvcrawler/vo/mapper/WebsiteMapper.xml" />
-		
+		<mapper resource="com/uvcrawler/vo/mapper/ShouldVisitFilter.xml" />
 	</mappers>
 </configuration>  

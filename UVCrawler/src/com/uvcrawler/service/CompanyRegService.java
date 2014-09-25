@@ -20,11 +20,11 @@ public interface CompanyRegService {
 	public List<Reg_company> getAllRegs();
 	
 	/**
-	 * 
+	 * 依据website_id获取抽取规则
 	 * @param id
 	 * @return
 	 */
-	public Reg_company getRegByWebsiteId(int id);
+	public Reg_company getRegByWebsiteId(int website_id);
 	
 	
 }

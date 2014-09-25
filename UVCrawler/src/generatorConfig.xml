@@ -25,6 +25,8 @@
     </table>
      <table schema="uvcrawler" tableName="uv_website" domainObjectName="Website">
     </table>
+    <table schema="uvcrawler" tableName="uv_shouldvisit" domainObjectName="ShouldVisitFilter">
+    </table>
    
   </context>
 
