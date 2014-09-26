@@ -25,6 +25,7 @@ public interface CompanyRegService {
 	 * @return
 	 */
 	public Reg_company getRegByWebsiteId(int id);
+
 	
 	
 }

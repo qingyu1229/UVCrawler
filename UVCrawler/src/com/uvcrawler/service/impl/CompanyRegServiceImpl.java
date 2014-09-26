@@ -11,7 +11,7 @@ public class CompanyRegServiceImpl implements CompanyRegService {
 
 	private Reg_companyMapper reg_companyMapper;
 	
-	
+
 	@Override
 	public boolean addReg(Reg_company reg) {
 		int i=reg_companyMapper.insert(reg);
