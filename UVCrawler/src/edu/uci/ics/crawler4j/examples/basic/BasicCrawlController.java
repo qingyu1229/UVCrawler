@@ -29,24 +29,24 @@ import edu.uci.ics.crawler4j.robotstxt.RobotstxtServer;
 public class BasicCrawlController {
 
 	public static void main(String[] args) throws Exception {
-		if (args.length != 2) {
+		/*if (args.length != 2) {
 			System.out.println("Needed parameters: ");
 			System.out.println("\t rootFolder (it will contain intermediate crawl data)");
 			System.out.println("\t numberOfCralwers (number of concurrent threads)");
 			return;
-		}
+		}*/
 
 		/*
 		 * crawlStorageFolder is a folder where intermediate crawl data is
 		 * stored.
 		 */
-		String crawlStorageFolder = args[0];
+		String crawlStorageFolder = "d://crawlstore/test";
 
 		/*
 		 * numberOfCrawlers shows the number of concurrent threads that should
 		 * be initiated for crawling.
 		 */
-		int numberOfCrawlers = Integer.parseInt(args[1]);
+		int numberOfCrawlers = 10;
 		
 		CrawlConfig config = new CrawlConfig();
 
@@ -87,7 +87,6 @@ public class BasicCrawlController {
 		 * rootFolder manually.
 		 */
 		config.setResumableCrawling(false);
-
 		/*
 		 * Instantiate the controller for this crawl.
 		 */
@@ -95,7 +94,8 @@ public class BasicCrawlController {
 		RobotstxtConfig robotstxtConfig = new RobotstxtConfig();
 		RobotstxtServer robotstxtServer = new RobotstxtServer(robotstxtConfig, pageFetcher);
 		CrawlController controller = new CrawlController(config, pageFetcher, robotstxtServer);
-
+		
+		
 		/*
 		 * For each crawl, you need to add some seed urls. These are the first
 		 * URLs that are fetched and then the crawler starts following links
@@ -105,8 +105,8 @@ public class BasicCrawlController {
 		controller.addSeed("http://www.ics.uci.edu/");
 		controller.addSeed("http://www.ics.uci.edu/~lopes/");
 		controller.addSeed("http://www.ics.uci.edu/~welling/");
-
-		BasicCrawler bc=new BasicCrawler();
+		
+		//BasicCrawler bc=new BasicCrawler();
 		/*
 		 * Start the crawl. This is a blocking operation, meaning that your code
 		 * will reach the line after this only when crawling is finished.

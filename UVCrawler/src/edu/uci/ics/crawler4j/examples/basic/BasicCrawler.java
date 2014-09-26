@@ -33,6 +33,8 @@ public class BasicCrawler extends WebCrawler {
 	private final static Pattern FILTERS = Pattern.compile(".*(\\.(css|js|bmp|gif|jpe?g" + "|png|tiff?|mid|mp2|mp3|mp4"
 			+ "|wav|avi|mov|mpeg|ram|m4v|pdf" + "|rm|smil|wmv|swf|wma|zip|rar|gz))$");
 
+	
+	
 	/**
 	 * You should implement this function to specify whether the given url
 	 * should be crawled or not (based on your crawling logic).
@@ -49,6 +51,8 @@ public class BasicCrawler extends WebCrawler {
 	 */
 	@Override
 	public void visit(Page page) {
+		
+		
 		int docid = page.getWebURL().getDocid();
 		String url = page.getWebURL().getURL();
 		String domain = page.getWebURL().getDomain();

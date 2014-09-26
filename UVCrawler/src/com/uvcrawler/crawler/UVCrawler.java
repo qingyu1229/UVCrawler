@@ -1,9 +1,12 @@
 package com.uvcrawler.crawler;
 
+import java.util.List;
 import java.util.Map;
 
 import com.uvcrawler.UVBasicCrawler;
+import com.uvcrawler.store.ShouldVisitPageStore;
 import com.uvcrawler.vo.Reg_company;
+import com.uvcrawler.vo.ShouldVisitFilter;
 
 import edu.uci.ics.crawler4j.crawler.Page;
 import edu.uci.ics.crawler4j.parser.HtmlParseData;
@@ -11,23 +14,16 @@ import edu.uci.ics.crawler4j.url.WebURL;
 
 public class UVCrawler extends UVBasicCrawler {
 
-	private Map<Short,String> map;
-	private Reg_company companyReg;
-	
-	public UVCrawler(Map<Short,String> map,Reg_company companyReg){
-		this.map=map;
-		this.companyReg=companyReg;
-	}
-	
 	@Override
 	public void onStart() {
-		// TODO Auto-generated method stub
 		super.onStart();
 	}
 
 	@Override
 	public boolean shouldVisit(WebURL url) {
-		return super.shouldVisit(url);
+		String href = url.getURL().toLowerCase();
+		List<ShouldVisitFilter> filters= ShouldVisitPageStore.getInstance().getFilterByDomain(url.getDomain());
+		return shouldVisit(filters,href);
 	}
 
 	@Override

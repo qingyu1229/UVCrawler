@@ -26,4 +26,11 @@ public interface ShouldVisitService {
 	 */
 	public List<ShouldVisitFilter> getFilters();
 	
+	/**
+	 * 
+	 * @return
+	 */
+	public List<ShouldVisitFilter> getFiltersByDomain(String domain);
+	
+	
 }
