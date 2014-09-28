@@ -28,6 +28,9 @@ import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.html.HtmlParser;
 
+import com.uvcrawler.selector.Selector;
+import com.uvcrawler.store.SelectorStore;
+
 import edu.uci.ics.crawler4j.crawler.Configurable;
 import edu.uci.ics.crawler4j.crawler.CrawlConfig;
 import edu.uci.ics.crawler4j.crawler.Page;
@@ -76,6 +79,10 @@ public class Parser extends Configurable {
 		try {
 			inputStream = new ByteArrayInputStream(page.getContentData());
 			htmlParser.parse(inputStream, contentHandler, metadata, parseContext);
+			
+			
+			extendParser(page);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -146,5 +153,15 @@ public class Parser extends Configurable {
 		return true;
 
 	}
+
+	private void extendParser(Page page) {
+		Selector selector= SelectorStore.getInstance().getSelector(page.getWebURL().getDomain());
+		
+		
+		
+		
+	}
+
+	
 
 }

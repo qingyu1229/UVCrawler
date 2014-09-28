@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.uvcrawler.vo.Reg_company;
+
 /**
  * Borrowed from https://code.google.com/p/cx-extractor/
  *
@@ -87,4 +89,10 @@ public class SmartContentSelector implements Selector {
     public List<String> selectList(String text) {
         throw new UnsupportedOperationException();
     }
+
+	@Override
+	public String select(Reg_company reg, String htmlStr) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

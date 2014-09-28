@@ -1,12 +1,14 @@
 package com.uvcrawler.selector;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
+
+import org.apache.commons.lang3.StringUtils;
+
+import com.uvcrawler.vo.Reg_company;
 
 /**
  * Selector in regex.<br>
@@ -89,5 +91,11 @@ public class RegexSelector implements Selector {
     public String toString() {
         return regexStr;
     }
+
+	@Override
+	public String select(Reg_company reg, String htmlStr) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

@@ -3,6 +3,8 @@ package com.uvcrawler.selector;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.uvcrawler.vo.Reg_company;
+
 /**
  * All selectors will be arranged as a pipeline. <br>
  * The next selector uses the result of the previous as source.
@@ -55,4 +57,10 @@ public class AndSelector implements Selector {
         }
         return results;
     }
+
+	@Override
+	public String select(Reg_company reg, String htmlStr) {
+		
+		return null;
+	}
 }

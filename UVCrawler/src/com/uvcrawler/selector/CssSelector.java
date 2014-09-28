@@ -1,13 +1,15 @@
 package com.uvcrawler.selector;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.commons.collections.CollectionUtils;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.uvcrawler.vo.Reg_company;
 
 /**
  * CSS selector. Based on Jsoup.
@@ -78,4 +80,10 @@ public class CssSelector extends BaseElementSelector {
         }
         return strings;
     }
+
+	@Override
+	public String select(Reg_company reg, String htmlStr) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

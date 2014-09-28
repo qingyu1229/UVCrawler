@@ -2,6 +2,8 @@ package com.uvcrawler.selector;
 
 import java.util.List;
 
+import com.uvcrawler.vo.Reg_company;
+
 /**
  * Selector(extractor) for text.<br>
  *
@@ -26,5 +28,8 @@ public interface Selector {
      * @return results
      */
     public List<String> selectList(String text);
+    
+    
+    public String select(Reg_company reg,String htmlStr);
 
 }

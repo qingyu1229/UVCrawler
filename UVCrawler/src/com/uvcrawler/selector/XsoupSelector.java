@@ -1,11 +1,12 @@
 package com.uvcrawler.selector;
 
+import java.util.List;
+
 import org.jsoup.nodes.Element;
 
 import com.uvcrawler.selector.xsoup.Xsoup;
 import com.uvcrawler.selector.xsoup.xevaluator.XPathEvaluator;
-
-import java.util.List;
+import com.uvcrawler.vo.Reg_company;
 
 /**
  * XPath selector based on Xsoup.<br>
@@ -30,4 +31,10 @@ public class XsoupSelector extends BaseElementSelector {
     public List<String> selectList(Element element) {
         return xPathEvaluator.evaluate(element).list();
     }
+
+	@Override
+	public String select(Reg_company reg, String htmlStr) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

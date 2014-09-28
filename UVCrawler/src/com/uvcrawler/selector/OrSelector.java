@@ -3,6 +3,8 @@ package com.uvcrawler.selector;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.uvcrawler.vo.Reg_company;
+
 /**
  * All extractors will do extracting separately, <br>
  * and the results of extractors will combined as the final result.
@@ -43,4 +45,10 @@ public class OrSelector implements Selector {
         }
         return results;
     }
+
+	@Override
+	public String select(Reg_company reg, String htmlStr) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

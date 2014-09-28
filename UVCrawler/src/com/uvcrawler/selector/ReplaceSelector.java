@@ -5,6 +5,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
+import com.uvcrawler.vo.Reg_company;
+
 /**
  * Replace selector.<br>
  *
@@ -44,5 +46,11 @@ public class ReplaceSelector implements Selector {
     public String toString() {
         return regexStr + "_" + replacement;
     }
+
+	@Override
+	public String select(Reg_company reg, String htmlStr) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
