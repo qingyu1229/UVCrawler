@@ -5,8 +5,8 @@
 
     <jdbcConnection driverClass="com.mysql.jdbc.Driver" 
     connectionURL="jdbc:mysql://182.254.133.252:3306/uvcrawler?autoReconnect=true&amp;characterEncoding=UTF-8" 
-    userId="root" 
-    password="root" />
+    userId="liang" 
+    password="liang" />
     <javaModelGenerator targetPackage="com.uvcrawler.vo" targetProject="UVCrawler/src" />
     <sqlMapGenerator targetPackage="com.uvcrawler.vo.mapper" targetProject="UVCrawler/src" />
     <javaClientGenerator targetPackage="com.uvcrawler.vo.client" targetProject="UVCrawler/src" type="XMLMAPPER" />
